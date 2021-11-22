@@ -1,10 +1,10 @@
 import React, { createContext, useState, useContext } from "react";
 
-const UserContext = createContext({ username: 'unknown' });
+const UserContext = createContext({ username: 'unknown', helloCount: 0 });
 const SetUserContext = createContext(() => {});
 
 export default function ModifyAble() {
-  const [user, setUser] = useState({ username: 'mike' });
+  const [user, setUser] = useState({ username: 'mike', helloCount: 0 });
   return (
     <div>
       <SetUserContext.Provider value={setUser}>
